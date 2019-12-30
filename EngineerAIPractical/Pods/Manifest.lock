@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (4.9.1)
+  - AlamofireJsonToObjects (2.4.1):
+    - Alamofire
+    - EVReflection
+  - EVReflection (5.10.1):
+    - EVReflection/Core (= 5.10.1)
+  - EVReflection/Core (5.10.1)
+  - SDWebImage (5.4.0):
+    - SDWebImage/Core (= 5.4.0)
+  - SDWebImage/Core (5.4.0)
+  - SVProgressHUD (2.2.5)
+  - UIScrollView-InfiniteScroll (1.1.0)
+
+DEPENDENCIES:
+  - AlamofireJsonToObjects
+  - SDWebImage
+  - SVProgressHUD
+  - UIScrollView-InfiniteScroll
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireJsonToObjects
+    - EVReflection
+    - SDWebImage
+    - SVProgressHUD
+    - UIScrollView-InfiniteScroll
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireJsonToObjects: 2f652417f69ca86f229b704cdd00370bb892af45
+  EVReflection: 8124de482178d34ccd56473e16cd95990f9a1113
+  SDWebImage: 5bf6aec6481ae2a062bdc59f9d6c1d1e552090e0
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
+
+PODFILE CHECKSUM: 04d63551aed9f3acf92a6b48bb42fab00b0367c0
+
+COCOAPODS: 1.8.4
