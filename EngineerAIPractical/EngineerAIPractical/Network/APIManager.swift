@@ -23,7 +23,6 @@ class APIManger {
 }
 
 extension APIManger {
-    
     func sendGenericCall<T:GenericModal>(router:APIRouter,type:T.Type, showProgressHud: Bool = false, successCompletion:@escaping (_ response:T)->Void,failure:@escaping (_ error:Error)->Void)  {
         
         if NetworkReachabilityManager()!.isReachable == false {
@@ -41,24 +40,14 @@ extension APIManger {
             SVProgressHUD.show()
         }
         
-        print("Request : \(path)")
-        
         session.request(path, method: router.method, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject { (response:DataResponse<T>) in
             SVProgressHUD.dismiss()
-            print(response)
-            if response.result.isSuccess {
-                successCompletion(response.result.value!)
-            }else{
-                failure(response.error!)
-            }
-            }.responseJSON { (response) in
-                switch response.result {
-                case .success:
-                    break
-                case .failure(_):
-                    break
+                if response.result.isSuccess {
+                    successCompletion(response.result.value!)
+                }else{
+                    failure(response.error!)
                 }
-        }
+            }
     }
     
     private func alertMessage(message:String) {

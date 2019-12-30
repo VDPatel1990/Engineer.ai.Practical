@@ -20,14 +20,12 @@ extension APIRouter : Router {
             return .get
         }
     }
-
     var path: String {
         switch self {
         case .getUserList :
             return Environment.basePath + "users"
         }
     }
-    
     var parameter: [String : String] {
         switch self {
         case .getUserList(let param):

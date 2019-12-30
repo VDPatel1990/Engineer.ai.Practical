@@ -9,11 +9,13 @@
 import UIKit
 import SDWebImage
 
-class CollectionCell: UICollectionViewCell {
+final class CollectionCell: UICollectionViewCell {
     
+    //MARK :- Outlets
     @IBOutlet private var imgView : UIImageView!
     @IBOutlet private var activityIndicator : UIActivityIndicatorView!
     
+    //MARK :- Variabels
     var setImage : String = ""  {
         didSet {
             self.activityIndicator.startAnimating()

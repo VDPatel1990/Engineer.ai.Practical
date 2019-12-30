@@ -8,12 +8,14 @@
 
 import UIKit
 
-class CollectionHeaderView: UICollectionReusableView {
+final class CollectionHeaderView: UICollectionReusableView {
     
+    //MARK :- Outlets
     @IBOutlet private weak var imgUser : UIImageView!
     @IBOutlet private weak var labelName : UILabel!
     @IBOutlet private weak var activityView : UIActivityIndicatorView!
     
+    //MARK :- Variabels
     var user : Users! {
         didSet {
             self.labelName.text = user.name
@@ -30,5 +32,4 @@ class CollectionHeaderView: UICollectionReusableView {
         self.imgUser.layer.cornerRadius = self.imgUser.frame.width / 2.0
         self.imgUser.clipsToBounds = true
     }
-    
 }
