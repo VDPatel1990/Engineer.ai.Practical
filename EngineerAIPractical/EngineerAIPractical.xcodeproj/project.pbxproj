@@ -17,6 +17,7 @@
 		92852DD223B9F91100D5C1CD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92852DCF23B9F91100D5C1CD /* APIManager.swift */; };
 		92852DD323B9F91100D5C1CD /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92852DD023B9F91100D5C1CD /* APIRouter.swift */; };
 		92852DD623B9FA1B00D5C1CD /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92852DD523B9FA1B00D5C1CD /* APIModel.swift */; };
+		92852DD923B9FE7200D5C1CD /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92852DD823B9FE7200D5C1CD /* CollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		92852DCF23B9F91100D5C1CD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		92852DD023B9F91100D5C1CD /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		92852DD523B9FA1B00D5C1CD /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		92852DD823B9FE7200D5C1CD /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		DFDC38D2C6C7ED2FC4F9E648 /* Pods_EngineerAIPractical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EngineerAIPractical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE3FE6D339D10AA26E5DE5AF /* Pods-EngineerAIPractical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngineerAIPractical.debug.xcconfig"; path = "Target Support Files/Pods-EngineerAIPractical/Pods-EngineerAIPractical.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 		92852DBA23B9F77100D5C1CD /* EngineerAIPractical */ = {
 			isa = PBXGroup;
 			children = (
+				92852DD723B9FE4600D5C1CD /* View */,
 				92852DD423B9FA0800D5C1CD /* Model */,
 				92852DCD23B9F91100D5C1CD /* Network */,
 				92852DBB23B9F77100D5C1CD /* AppDelegate.swift */,
@@ -97,6 +100,14 @@
 				92852DD523B9FA1B00D5C1CD /* APIModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		92852DD723B9FE4600D5C1CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92852DD823B9FE7200D5C1CD /* CollectionCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B2E248CB14886F173292E125 /* Pods */ = {
@@ -235,6 +246,7 @@
 				92852DD323B9F91100D5C1CD /* APIRouter.swift in Sources */,
 				92852DBE23B9F77100D5C1CD /* ViewController.swift in Sources */,
 				92852DD123B9F91100D5C1CD /* Environment.swift in Sources */,
+				92852DD923B9FE7200D5C1CD /* CollectionCell.swift in Sources */,
 				92852DD623B9FA1B00D5C1CD /* APIModel.swift in Sources */,
 				92852DBC23B9F77100D5C1CD /* AppDelegate.swift in Sources */,
 			);
