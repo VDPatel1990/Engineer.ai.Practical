@@ -17,20 +17,20 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qtu-aq-a9U">
-                    <rect key="frame" x="0.0" y="16.5" width="35" height="35"/>
+                    <rect key="frame" x="0.0" y="14" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="35" id="lK8-UY-rcv"/>
-                        <constraint firstAttribute="width" constant="35" id="qf2-Ld-yIf"/>
+                        <constraint firstAttribute="height" constant="40" id="lK8-UY-rcv"/>
+                        <constraint firstAttribute="width" constant="40" id="qf2-Ld-yIf"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QX0-Ze-2qg">
-                    <rect key="frame" x="45" y="25" width="37.5" height="18"/>
+                    <rect key="frame" x="50" y="25" width="37.5" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Js2-ks-uSt">
-                    <rect key="frame" x="7.5" y="24" width="20" height="20"/>
+                    <rect key="frame" x="10" y="24" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="uDl-48-nVm"/>
                         <constraint firstAttribute="width" constant="20" id="znj-6m-b13"/>
