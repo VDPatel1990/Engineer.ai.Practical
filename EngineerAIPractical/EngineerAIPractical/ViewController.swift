@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UIScrollView_InfiniteScroll
 
 class ViewController: UIViewController {
     
@@ -26,20 +27,37 @@ class ViewController: UIViewController {
 
     private func prepareView() {
         self.title = "User List"
+        self.collectionImage.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CollectionHeaderView")
+        
+        self.collectionImage.addInfiniteScroll { (collectionView) in
+            if self.hasMore {
+                self.offset += 10
+                self.getUserList()
+            }else{
+                collectionView.finishInfiniteScroll()
+            }
+        }
+        
         self.getUserList()
     }
     
     //MARK :- Get UserImage List api
     
     private func getUserList() {
-        let params = ["offset" : "0", "limit" : "10"]
-        APIManger.shared.sendGenericCall(router: .getUserList(param: params), type: UserModel.self, showProgressHud: true, successCompletion: { (response) in
+        let params = ["offset" : "\(self.offset)", "limit" : "10"]
+        APIManger.shared.sendGenericCall(router: .getUserList(param: params), type: UserModel.self, showProgressHud: self.offset == 0 ? true : false, successCompletion: { (response) in
             self.hasMore = response.data.hasMore
+            self.collectionImage.finishInfiniteScroll()
             if self.offset == 0 {
                 self.arrayUsers = response.data.users
             }else{
                 self.arrayUsers.append(contentsOf: response.data.users)
             }
+            
+            if !self.hasMore {
+                self.collectionImage.removeInfiniteScroll()
+            }
+            
             self.collectionImage.reloadData()
             
         }) { (error) in
@@ -54,6 +72,22 @@ extension ViewController : UICollectionViewDataSource, UICollectionViewDelegate 
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayUsers[section].items.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+            
+        case UICollectionView.elementKindSectionHeader:
+            
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionHeaderView", for: indexPath as IndexPath) as! CollectionHeaderView
+            headerView.backgroundColor = UIColor.clear;
+            headerView.user = self.arrayUsers[indexPath.section]
+            return headerView
+            
+        default:
+            
+            assert(false, "Unexpected element kind")
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

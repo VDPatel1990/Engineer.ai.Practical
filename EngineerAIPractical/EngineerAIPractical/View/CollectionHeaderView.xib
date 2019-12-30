@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionHeaderView" id="U6b-Vx-4bR" customClass="CollectionHeaderView" customModule="EngineerAIPractical" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qtu-aq-a9U">
+                    <rect key="frame" x="0.0" y="16.5" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="lK8-UY-rcv"/>
+                        <constraint firstAttribute="width" constant="35" id="qf2-Ld-yIf"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QX0-Ze-2qg">
+                    <rect key="frame" x="45" y="25" width="37.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Js2-ks-uSt">
+                    <rect key="frame" x="7.5" y="24" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="uDl-48-nVm"/>
+                        <constraint firstAttribute="width" constant="20" id="znj-6m-b13"/>
+                    </constraints>
+                </activityIndicatorView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="QX0-Ze-2qg" firstAttribute="centerY" secondItem="VXr-Tz-HHm" secondAttribute="centerY" id="7IK-z4-eXa"/>
+                <constraint firstItem="Js2-ks-uSt" firstAttribute="centerX" secondItem="qtu-aq-a9U" secondAttribute="centerX" id="7nq-hb-uCT"/>
+                <constraint firstItem="qtu-aq-a9U" firstAttribute="centerY" secondItem="VXr-Tz-HHm" secondAttribute="centerY" id="HyR-f2-d7Y"/>
+                <constraint firstItem="Js2-ks-uSt" firstAttribute="centerY" secondItem="qtu-aq-a9U" secondAttribute="centerY" id="VBg-k2-vlJ"/>
+                <constraint firstItem="QX0-Ze-2qg" firstAttribute="leading" secondItem="qtu-aq-a9U" secondAttribute="trailing" constant="10" id="sQu-qw-MhA"/>
+                <constraint firstItem="qtu-aq-a9U" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="zOJ-x6-eYN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="activityView" destination="Js2-ks-uSt" id="wyA-UN-rVF"/>
+                <outlet property="imgUser" destination="qtu-aq-a9U" id="37X-o8-fy9"/>
+                <outlet property="labelName" destination="QX0-Ze-2qg" id="fQ7-RO-Fxf"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="102.45535714285714"/>
+        </collectionReusableView>
+    </objects>
+</document>

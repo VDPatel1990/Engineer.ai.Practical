@@ -18,6 +18,8 @@
 		92852DD323B9F91100D5C1CD /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92852DD023B9F91100D5C1CD /* APIRouter.swift */; };
 		92852DD623B9FA1B00D5C1CD /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92852DD523B9FA1B00D5C1CD /* APIModel.swift */; };
 		92852DD923B9FE7200D5C1CD /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92852DD823B9FE7200D5C1CD /* CollectionCell.swift */; };
+		92852DDC23BA01E700D5C1CD /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92852DDA23BA01E700D5C1CD /* CollectionHeaderView.swift */; };
+		92852DDD23BA01E700D5C1CD /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92852DDB23BA01E700D5C1CD /* CollectionHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		92852DD023B9F91100D5C1CD /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		92852DD523B9FA1B00D5C1CD /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 		92852DD823B9FE7200D5C1CD /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		92852DDA23BA01E700D5C1CD /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		92852DDB23BA01E700D5C1CD /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		DFDC38D2C6C7ED2FC4F9E648 /* Pods_EngineerAIPractical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EngineerAIPractical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE3FE6D339D10AA26E5DE5AF /* Pods-EngineerAIPractical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngineerAIPractical.debug.xcconfig"; path = "Target Support Files/Pods-EngineerAIPractical/Pods-EngineerAIPractical.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				92852DD823B9FE7200D5C1CD /* CollectionCell.swift */,
+				92852DDA23BA01E700D5C1CD /* CollectionHeaderView.swift */,
+				92852DDB23BA01E700D5C1CD /* CollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92852DC623B9F77400D5C1CD /* LaunchScreen.storyboard in Resources */,
+				92852DDD23BA01E700D5C1CD /* CollectionHeaderView.xib in Resources */,
 				92852DC323B9F77400D5C1CD /* Assets.xcassets in Resources */,
 				92852DC123B9F77100D5C1CD /* Main.storyboard in Resources */,
 			);
@@ -247,6 +254,7 @@
 				92852DBE23B9F77100D5C1CD /* ViewController.swift in Sources */,
 				92852DD123B9F91100D5C1CD /* Environment.swift in Sources */,
 				92852DD923B9FE7200D5C1CD /* CollectionCell.swift in Sources */,
+				92852DDC23BA01E700D5C1CD /* CollectionHeaderView.swift in Sources */,
 				92852DD623B9FA1B00D5C1CD /* APIModel.swift in Sources */,
 				92852DBC23B9F77100D5C1CD /* AppDelegate.swift in Sources */,
 			);
